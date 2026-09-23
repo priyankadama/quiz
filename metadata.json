@@ -1,0 +1,6 @@
+{
+  "name": "Vankadiya Primary School - Std 8 GK Quiz Portal",
+  "description": "Comprehensive Standard 8 General Knowledge quiz, interactive test, printable worksheets, and study guide for students of Vankadiya Primary School in Gujarati and English.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
