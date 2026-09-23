@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Question, LanguageMode } from '../types';
-import { SCHOOL_NAME_GU, SCHOOL_NAME_EN, TARGET_GRADE } from '../data/quizData';
+import { SCHOOL_NAME_GU, SCHOOL_NAME_EN, TEACHER_NAME_GU, TEACHER_NAME_EN, TARGET_GRADE } from '../data/quizData';
 import { soundManager } from '../utils/audio';
 import { Printer, Download, Eye, FileText, CheckCircle2 } from 'lucide-react';
 
@@ -119,6 +119,9 @@ export const PrintWorksheet: React.FC<PrintWorksheetProps> = ({
           <div className="inline-block bg-stone-100 border border-stone-300 px-4 py-1 rounded-md text-xs sm:text-sm font-bold text-stone-900">
             સામાન્ય જ્ઞાન કસોટી (GK Evaluation Test) · {TARGET_GRADE}
           </div>
+          <div className="text-xs font-semibold text-stone-600 mt-1">
+            વર્ગ શિક્ષિકા: <span className="text-stone-900 font-bold">{TEACHER_NAME_GU}</span>
+          </div>
         </div>
 
         {/* Student Details Grid */}
@@ -196,7 +199,8 @@ export const PrintWorksheet: React.FC<PrintWorksheetProps> = ({
           </div>
           <div className="text-center">
             <div className="w-32 border-b border-stone-400 mb-1" />
-            <span className="text-stone-600">વર્ગ શિક્ષકની સહી</span>
+            <span className="text-stone-700 font-semibold block">પ્રિયંકાબેન</span>
+            <span className="text-stone-500 text-[11px]">વર્ગ શિક્ષિકા</span>
           </div>
         </div>
 

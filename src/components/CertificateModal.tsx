@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SCHOOL_NAME_GU, SCHOOL_NAME_EN, TARGET_GRADE } from '../data/quizData';
+import { SCHOOL_NAME_GU, SCHOOL_NAME_EN, TEACHER_NAME_GU, TEACHER_NAME_EN, TARGET_GRADE } from '../data/quizData';
 import { soundManager } from '../utils/audio';
 import { Award, Printer, X, Download, Sparkles, Check } from 'lucide-react';
 
@@ -169,8 +169,8 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
           <div className="mt-10 pt-6 border-t border-stone-300 flex items-center justify-between gap-4 text-xs sm:text-sm">
             <div className="text-center">
               <div className="w-28 sm:w-36 border-b border-stone-500 mb-1" />
-              <div className="font-semibold text-stone-800">વર્ગ શિક્ષક શ્રી</div>
-              <div className="text-[11px] text-stone-500">ધોરણ ૮</div>
+              <div className="font-semibold text-stone-800">પ્રિયંકાબેન</div>
+              <div className="text-[11px] text-stone-500">વર્ગ શિક્ષિકા (ધોરણ ૮)</div>
             </div>
 
             {/* School Seal */}

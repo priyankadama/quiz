@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { STD_8_GK_QUESTIONS, BONUS_QUESTIONS_GUJARAT, SCHOOL_NAME_GU, SCHOOL_NAME_EN, TARGET_GRADE } from './data/quizData';
+import { STD_8_GK_QUESTIONS, BONUS_QUESTIONS_GUJARAT, SCHOOL_NAME_GU, SCHOOL_NAME_EN, TEACHER_NAME_GU, TEACHER_NAME_EN, TARGET_GRADE } from './data/quizData';
 import { ActiveTab, LanguageMode, Question } from './types';
 import { Header } from './components/Header';
 import { QuizMode } from './components/QuizMode';
@@ -61,11 +61,13 @@ export default function App() {
       {/* Sub-bar / Quick Information Bar (Hidden during Print) */}
       <div className="bg-amber-50/70 border-b border-amber-200/50 py-2 px-4 print:hidden">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
-          <div className="flex items-center gap-2 text-stone-700 text-center sm:text-left">
+          <div className="flex items-center gap-2 text-stone-700 text-center sm:text-left flex-wrap">
             <span className="font-bold text-amber-900">📌 શાળા:</span>
-            <span>{SCHOOL_NAME_GU} (વર્ગ: ધોરણ - ૮)</span>
+            <span className="font-semibold text-stone-900">{SCHOOL_NAME_GU}</span>
+            <span aria-hidden="true">·</span>
+            <span className="font-bold text-emerald-800">શિક્ષિકા: પ્રિયંકાબેન</span>
             <span aria-hidden="true" className="hidden sm:inline">·</span>
-            <span className="text-stone-600 hidden sm:inline">૧૩-૧૪ વર્ષના વિદ્યાર્થીઓ માટે ખાસ તૈયાર કરેલ સામાન્ય જ્ઞાન</span>
+            <span className="text-stone-600 hidden sm:inline">સામાન્ય જ્ઞાન કસોટી ({TARGET_GRADE})</span>
           </div>
 
           <div className="flex items-center gap-2">

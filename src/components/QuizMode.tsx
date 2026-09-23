@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Question, LanguageMode } from '../types';
+import { SCHOOL_NAME_GU, SCHOOL_NAME_EN, TEACHER_NAME_GU, TEACHER_NAME_EN, TARGET_GRADE } from '../data/quizData';
 import { soundManager } from '../utils/audio';
 import confetti from 'canvas-confetti';
 import {
@@ -428,12 +429,18 @@ export const QuizMode: React.FC<QuizModeProps> = ({
       <div className="bg-white rounded-2xl border border-stone-200 p-5 sm:p-7 shadow-xs">
         {/* Category & Audio Listen Bar */}
         <div className="flex items-center justify-between gap-2 mb-3">
-          <div className="flex items-center gap-2 text-xs text-stone-500">
-            <span className="font-semibold text-stone-800 uppercase tracking-wider">
-              {languageMode === 'en' ? currentQ.categoryEn : currentQ.categoryGu}
+          <div className="flex items-center gap-2 text-xs text-stone-500 flex-wrap">
+            <span className="font-bold text-amber-900 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+              {SCHOOL_NAME_GU}
             </span>
             <span aria-hidden="true">·</span>
-            <span>ધોરણ ૮ યોગ્ય સ્તર</span>
+            <span className="font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+              શિક્ષિકા: પ્રિયંકાબેન
+            </span>
+            <span aria-hidden="true">·</span>
+            <span className="font-semibold text-stone-700">
+              {languageMode === 'en' ? currentQ.categoryEn : currentQ.categoryGu}
+            </span>
           </div>
 
           <button

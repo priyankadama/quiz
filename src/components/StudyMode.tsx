@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Question, LanguageMode } from '../types';
 import { soundManager } from '../utils/audio';
-import { SCHOOL_NAME_GU, SCHOOL_NAME_EN, TARGET_GRADE } from '../data/quizData';
+import { SCHOOL_NAME_GU, SCHOOL_NAME_EN, TEACHER_NAME_GU, TEACHER_NAME_EN, TARGET_GRADE } from '../data/quizData';
 import {
   Volume2,
   Copy,
@@ -48,7 +48,7 @@ export const StudyMode: React.FC<StudyModeProps> = ({
     soundManager.playClick();
     const letters = ['A', 'B', 'C', 'D'];
     const optionsText = q.optionsGu.map((opt, i) => `[${letters[i]}] ${opt}`).join('\n');
-    const fullText = `શાળા: ${SCHOOL_NAME_GU} (${TARGET_GRADE})\nપ્રશ્ન ${q.id}: ${q.questionGu}\n${optionsText}\nસાચો જવાબ: [${letters[q.correctAnswer]}] ${q.optionsGu[q.correctAnswer]}\nસમજૂતી: ${q.explanationGu}\nવિશેષ તથ્ય: ${q.factGu}`;
+    const fullText = `શાળા: ${SCHOOL_NAME_GU}\nશિક્ષિકા: પ્રિયંકાબેન (${TARGET_GRADE})\nપ્રશ્ન ${q.id}: ${q.questionGu}\n${optionsText}\nસાચો જવાબ: [${letters[q.correctAnswer]}] ${q.optionsGu[q.correctAnswer]}\nસમજૂતી: ${q.explanationGu}\nવિશેષ તથ્ય: ${q.factGu}`;
 
     navigator.clipboard.writeText(fullText);
     setCopiedId(q.id);
@@ -58,7 +58,7 @@ export const StudyMode: React.FC<StudyModeProps> = ({
   const handleCopyAll = () => {
     soundManager.playClick();
     const letters = ['A', 'B', 'C', 'D'];
-    const header = `=== ${SCHOOL_NAME_GU} - ${TARGET_GRADE} ===\nસામાન્ય જ્ઞાન (GK) ૧૦ પ્રશ્નો અને જવાબો\n\n`;
+    const header = `=== ${SCHOOL_NAME_GU} ===\nવર્ગ શિક્ષિકા: પ્રિયંકાબેન | વર્ગ: ${TARGET_GRADE}\nસામાન્ય જ્ઞાન (GK) પ્રશ્નોત્તરી બેંક\n\n`;
 
     const body = questions
       .map((q, idx) => {

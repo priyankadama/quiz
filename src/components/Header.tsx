@@ -1,7 +1,7 @@
 import React from 'react';
 import { ActiveTab, LanguageMode } from '../types';
-import { SCHOOL_NAME_GU, SCHOOL_NAME_EN, TARGET_GRADE } from '../data/quizData';
-import { Volume2, VolumeX, BookOpen, CheckCircle, Printer, Award, Sparkles, GraduationCap } from 'lucide-react';
+import { SCHOOL_NAME_GU, SCHOOL_NAME_EN, TEACHER_NAME_GU, TEACHER_NAME_EN, TARGET_GRADE } from '../data/quizData';
+import { Volume2, VolumeX, BookOpen, CheckCircle, Printer, Award, Sparkles, GraduationCap, UserCheck } from 'lucide-react';
 import { soundManager } from '../utils/audio';
 
 interface HeaderProps {
@@ -82,10 +82,13 @@ export const Header: React.FC<HeaderProps> = ({
                   {SCHOOL_NAME_EN}
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-xs text-stone-500 justify-center sm:justify-start mt-0.5">
-                <span className="font-medium text-amber-800">{TARGET_GRADE}</span>
+              <div className="flex items-center gap-2 text-xs text-stone-500 justify-center sm:justify-start mt-0.5 flex-wrap">
+                <span className="font-semibold text-amber-800">{TARGET_GRADE}</span>
                 <span aria-hidden="true">·</span>
-                <span>સામાન્ય જ્ઞાન કસોટી (GK Quiz)</span>
+                <span className="inline-flex items-center gap-1 font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                  <UserCheck className="w-3 h-3 text-emerald-700" />
+                  <span>શિક્ષિકા: પ્રિયંકાબેન (Teacher: Priyankaben)</span>
+                </span>
                 <span aria-hidden="true">·</span>
                 <span>{totalQuestions} પ્રશ્નો</span>
               </div>

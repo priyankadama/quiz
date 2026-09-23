@@ -2,11 +2,143 @@ import { Question } from '../types';
 
 export const SCHOOL_NAME_GU = "વાંકડીયા પ્રાથમિક શાળા";
 export const SCHOOL_NAME_EN = "Vankadiya Primary School";
+export const TEACHER_NAME_GU = "પ્રિયંકાબેન (Priyankaben)";
+export const TEACHER_NAME_EN = "Priyankaben";
 export const TARGET_GRADE = "ધોરણ - ૮ (Standard 8)";
 
-export const STD_8_GK_QUESTIONS: Question[] = [
+// The 5 primary questions explicitly requested by user (priyankaben)
+export const PRIYANKABEN_QUIZ_QUESTIONS: Question[] = [
   {
     id: 1,
+    questionGu: "ભારતના વર્તમાન વડાપ્રધાન (Prime Minister) કોણ છે?",
+    questionEn: "Who is our Prime Minister?",
+    optionsGu: [
+      "શ્રી નરેન્દ્ર મોદી",
+      "શ્રી રાહુલ ગાંધી",
+      "શ્રી અમિત શાહ",
+      "ડૉ. મનમોહન સિંહ"
+    ],
+    optionsEn: [
+      "Shri Narendra Modi",
+      "Shri Rahul Gandhi",
+      "Shri Amit Shah",
+      "Dr. Manmohan Singh"
+    ],
+    correctAnswer: 0,
+    explanationGu: "શ્રી નરેન્દ્ર દામોદરદાસ મોદી ભારતના ૧૪મા વડાપ્રધાન છે. તેઓ વર્ષ ૨૦૧૪ થી સતત ભારતના વડાપ્રધાન તરીકે કાર્યરત છે અને અગાઉ ગુજરાતના મુખ્યમંત્રી પણ રહી ચૂક્યા છે.",
+    explanationEn: "Shri Narendra Damodardas Modi is the 14th Prime Minister of India, serving continuously since 2014.",
+    categoryGu: "રાજકારણ અને શાસન",
+    categoryEn: "Politics & Governance",
+    factGu: "નરેન્દ્ર મોદી આઝાદ ભારતમાં જન્મેલા પ્રથમ વડાપ્રધાન છે.",
+    factEn: "Shri Narendra Modi is the first Prime Minister of India born after Independence.",
+    difficulty: "Standard 8"
+  },
+  {
+    id: 2,
+    questionGu: "આપણા રાષ્ટ્રપિતા (Father of the Nation) તરીકે કોણ ઓળખાય છે?",
+    questionEn: "Who is our Father of the Nation?",
+    optionsGu: [
+      "સરદાર વલ્લભભાઈ પટેલ",
+      "મહાત્મા ગાંધી (મોહનદાસ કરમચંદ ગાંધી)",
+      "જવાહરલાલ નેહરુ",
+      "સુભાષચંદ્ર બોઝ"
+    ],
+    optionsEn: [
+      "Sardar Vallabhbhai Patel",
+      "Mahatma Gandhi (Mohandas Karamchand Gandhi)",
+      "Jawaharlal Nehru",
+      "Subhas Chandra Bose"
+    ],
+    correctAnswer: 1,
+    explanationGu: "મહાત્મા ગાંધીજીને ભારતના 'રાષ્ટ્રપિતા' કહેવામાં આવે છે. તેમણે સત્ય અને અહિંસાના માર્ગે ભારતને આઝાદી અપાવવામાં ઐતિહાસિક નેતૃત્વ પૂરું પાડ્યું હતું. સુભાષચંદ્ર બોઝે ૧૯૪૪ માં સિંગાપોરથી રેડિયો સંબોધનમાં તેમને સૌપ્રથમ 'રાષ્ટ્રપિતા' કહ્યા હતા.",
+    explanationEn: "Mahatma Gandhi is revered as the Father of the Nation in India for leading the freedom movement through truth and non-violence.",
+    categoryGu: "ભારતીય ઇતિહાસ",
+    categoryEn: "Indian History",
+    factGu: "ગાંધીજીનો જન્મ ૨ ઓક્ટોબર ૧૮૬૯ ના રોજ પોરબંદર, ગુજરાતમાં થયો હતો. દર વર્ષે ૨ ઓક્ટોબરને 'આંતરરાષ્ટ્રીય અહિંસા દિવસ' તરીકે ઉજવાય છે.",
+    factEn: "Gandhiji was born on October 2, 1869 in Porbandar, Gujarat, celebrated worldwide as International Non-Violence Day.",
+    difficulty: "Standard 8"
+  },
+  {
+    id: 3,
+    questionGu: "ગુજરાત રાજ્યના વર્તમાન મુખ્યમંત્રી (Chief Minister) કોણ છે?",
+    questionEn: "Who is our Chief Minister?",
+    optionsGu: [
+      "શ્રી ભૂપેન્દ્રભાઈ પટેલ",
+      "શ્રી વિજયભાઈ રૂપાણી",
+      "શ્રી આનંદીબેન પટેલ",
+      "શ્રી નરેન્દ્ર મોદી"
+    ],
+    optionsEn: [
+      "Shri Bhupendrabhai Patel",
+      "Shri Vijay Rupani",
+      "Smt. Anandiben Patel",
+      "Shri Narendra Modi"
+    ],
+    correctAnswer: 0,
+    explanationGu: "શ્રી ભૂપેન્દ્રભાઈ પટેલ ગુજરાત રાજ્યના ૧૭મા મુખ્યમંત્રી છે. તેઓ અમદાવાદના ઘાટલોડિયા મતવિસ્તારના ધારાસભ્ય છે.",
+    explanationEn: "Shri Bhupendrabhai Patel is the current (17th) Chief Minister of Gujarat.",
+    categoryGu: "ગુજરાત શાસન",
+    categoryEn: "Gujarat Governance",
+    factGu: "ગુજરાતના પ્રથમ મુખ્યમંત્રી ડૉ. જીવરાજ નારાયણ મહેતા હતા (૧૯૬૦).",
+    factEn: "The first Chief Minister of Gujarat was Dr. Jivraj Narayan Mehta (1960).",
+    difficulty: "Standard 8"
+  },
+  {
+    id: 4,
+    questionGu: "ભારતમાં કયા શહેરને 'ગુલાબી નગરી' (Pink City) તરીકે ઓળખવામાં આવે છે?",
+    questionEn: "Which city is known as the 'Pink City'?",
+    optionsGu: [
+      "ઉદયપુર (Udaipur)",
+      "જયપુર (Jaipur)",
+      "જોધપુર (Jodhpur)",
+      "અમદાવાદ (Ahmedabad)"
+    ],
+    optionsEn: [
+      "Udaipur",
+      "Jaipur",
+      "Jodhpur",
+      "Ahmedabad"
+    ],
+    correctAnswer: 1,
+    explanationGu: "રાજસ્થાનની રાજધાની 'જયપુર' ને 'પિંક સિટી' (Pink City - ગુલાબી નગરી) કહેવાય છે. વર્ષ ૧૮૭૬ માં પ્રિન્સ ઓફ વેલ્સના સ્વાગત માટે મહારાજા સવાઈ રામસિંહે આખા શહેરને આતિથ્યના પ્રતીક તરીકે ગુલાબી રંગે રંગાવ્યું હતું.",
+    explanationEn: "Jaipur, the capital of Rajasthan, is known as the 'Pink City'. In 1876, Maharaja Sawai Ram Singh painted the entire city pink (the color of hospitality) to welcome the Prince of Wales.",
+    categoryGu: "ભારતીય ભૂગોળ",
+    categoryEn: "Indian Geography",
+    factGu: "જયપુર યુનેસ્કો વર્લ્ડ હેરિટેજ સાઇટ (વિશ્વ ધરોહર સ્થળ) તરીકે જાહેર થયેલું છે. જયપુરના હવામહલ અને આમેર કિલ્લો વિશ્વપ્રસિદ્ધ છે.",
+    factEn: "Jaipur is a designated UNESCO World Heritage city, famous for Hawa Mahal and Amer Fort.",
+    difficulty: "Standard 8"
+  },
+  {
+    id: 5,
+    questionGu: "ભારતની રાષ્ટ્રીય નદી (National River) કઈ છે?",
+    questionEn: "Which river is our National River?",
+    optionsGu: [
+      "યમુના નદી (Yamuna River)",
+      "નર્મદા નદી (Narmada River)",
+      "ગંગા નદી (Ganga River)",
+      "બ્રહ્મપુત્રા નદી (Brahmaputra River)"
+    ],
+    optionsEn: [
+      "Yamuna River",
+      "Narmada River",
+      "Ganga River",
+      "Brahmaputra River"
+    ],
+    correctAnswer: 2,
+    explanationGu: "ગંગા નદી ભારતની રાષ્ટ્રીય નદી છે. ભારત સરકારે વર્ષ ૨૦૦૮ માં ગંગાને સત્તાવાર રીતે 'રાષ્ટ્રીય નદી' નો દરજ્જો આપ્યો હતો. તે ભારતની સૌથી લાંબી નદી (લગભગ ૨,૫૨૫ કિમી) છે અને હિમાલયના ગંગોત્રી હિમનદીમાંથી ભગીરથી રૂપે નીકળે છે.",
+    explanationEn: "The Ganga (Ganges) is the National River of India, declared in 2008. It is India's longest river flowing over 2,525 km.",
+    categoryGu: "નદીઓ અને ભૂગોળ",
+    categoryEn: "Rivers & Geography",
+    factGu: "ગંગા નદીમાં જોવા મળતી 'ગંગા ડોલ્ફિન' (Gangetic Dolphin) ભારતનું રાષ્ટ્રીય જળચર પ્રાણી (National Aquatic Animal) છે.",
+    factEn: "The Gangetic River Dolphin found in the Ganga is India's National Aquatic Animal.",
+    difficulty: "Standard 8"
+  }
+];
+
+// Additional curriculum Standard 8 questions to complete the 10-question set
+export const ADDITIONAL_STD_8_QUESTIONS: Question[] = [
+  {
+    id: 6,
     questionGu: "ભારતના બંધારણના ઘડવૈયા અને 'બંધારણના પિતા' તરીકે કોણ ઓળખાય છે?",
     questionEn: "Who is known as the 'Father of the Indian Constitution'?",
     optionsGu: [
@@ -31,7 +163,7 @@ export const STD_8_GK_QUESTIONS: Question[] = [
     difficulty: "Standard 8"
   },
   {
-    id: 2,
+    id: 7,
     questionGu: "ગુજરાતમાં નર્મદા નદી પર આવેલી વિશ્વની સૌથી ઊંચી પ્રતિમા કઈ છે?",
     questionEn: "Which is the world's tallest statue located on the Narmada River in Gujarat?",
     optionsGu: [
@@ -56,7 +188,7 @@ export const STD_8_GK_QUESTIONS: Question[] = [
     difficulty: "Standard 8"
   },
   {
-    id: 3,
+    id: 8,
     questionGu: "સમગ્ર વિશ્વમાં 'એશિયાટિક સિંહ' (Gir Lion) નું એકમાત્ર કુદરતી નિવાસસ્થાન ગુજરાતનું કયું રાષ્ટ્રીય ઉદ્યાન છે?",
     questionEn: "Which national park in Gujarat is the only natural habitat of the Asiatic Lion in the entire world?",
     optionsGu: [
@@ -72,17 +204,17 @@ export const STD_8_GK_QUESTIONS: Question[] = [
       "Velavadar Blackbuck National Park"
     ],
     correctAnswer: 1,
-    explanationGu: "ગીર રાષ્ટ્રીય ઉદ્યાન અને અભયારણ્ય સૌરાષ્ટ્ર (જૂનાગઢ-ગીર સોમનાથ-અમરેલી) વિસ્તારમાં આવેલું છે, જે વિશ્વમાં એશિયાટિક સિંહોનું એકમાત્ર ઘર છે.",
+    explanationGu: "ગીર રાષ્ટ્રીય ઉદ્યાન અને અભયારણ્ય સૌરાષ્ટ્ર વિસ્તારમાં આવેલું છે, જે વિશ્વમાં એશિયાટિક સિંહોનું એકમાત્ર ઘર છે.",
     explanationEn: "Gir National Park and Wildlife Sanctuary in Gujarat is the only natural habitat of Asiatic Lions across the globe.",
-    categoryGu: "પર્યાવરણ અને ભૂગોળ",
-    categoryEn: "Environment & Geography",
-    factGu: "સિંહોના રક્ષણ માટે દર વર્ષે ૧૦ ઓગસ્ટના રોજ 'વિશ્વ સિંહ દિવસ' (World Lion Day) ઉજવવામાં આવે છે.",
+    categoryGu: "પર્યાવરણ અને પ્રાણીસૃષ્ટિ",
+    categoryEn: "Environment & Wildlife",
+    factGu: "દર વર્ષે ૧૦ ઓગસ્ટના રોજ 'વિશ્વ સિંહ દિવસ' (World Lion Day) ઉજવવામાં આવે છે.",
     factEn: "August 10 is observed globally as World Lion Day.",
     difficulty: "Standard 8"
   },
   {
-    id: 4,
-    questionGu: "ઓગસ્ટ ૨૦૨૩ માં ચંદ્રના દક્ષિણ ધ્રુવ પર સફળ સોફ્ટ લેન્ડિંગ કરનાર ભારતના ઐતિહાસિક અવકાશ મિશનનું નામ શું હતું?",
+    id: 9,
+    questionGu: "ઓગસ્ટ ૨૦૨૩ માં ચંદ્રના દક્ષિણ ધ્રુવ પર સફળ સોફ્ટ લેન્ડિંગ કરનાર ભારતના અવકાશ મિશનનું નામ શું હતું?",
     questionEn: "What was the name of India's historic space mission that successfully soft-landed near the South Pole of the Moon in August 2023?",
     optionsGu: [
       "ચંદ્રયાન-૨",
@@ -97,41 +229,16 @@ export const STD_8_GK_QUESTIONS: Question[] = [
       "Aditya-L1"
     ],
     correctAnswer: 2,
-    explanationGu: "ઇસરો (ISRO) દ્વારા ૨૩ ઓગસ્ટ ૨૦૨૩ ના રોજ ચંદ્રયાન-૩ ના વિક્રમ લેન્ડર અને પ્રજ્ઞાન રોવરે ચંદ્રના દક્ષિણ ધ્રુવ નજીક સફળતાપૂર્વક ઉતરાણ કર્યું હતું. આ સિદ્ધિ મેળવનાર ભારત પ્રથમ દેશ બન્યો.",
-    explanationEn: "On August 23, 2023, ISRO's Chandrayaan-3 achieved a historic soft landing near the Moon's South Pole, making India the first country to do so.",
+    explanationGu: "ઇસરો (ISRO) દ્વારા ૨૩ ઓગસ્ટ ૨૦૨૩ ના રોજ ચંદ્રયાન-૩ ના વિક્રમ લેન્ડરે ચંદ્રના દક્ષિણ ધ્રુવ નજીક સફળ ઉતરાણ કર્યું હતું. ભારત આ સિદ્ધિ મેળવનાર પ્રથમ દેશ બન્યો.",
+    explanationEn: "On August 23, 2023, ISRO's Chandrayaan-3 achieved a historic soft landing near the Moon's South Pole.",
     categoryGu: "વિજ્ઞાન અને અવકાશ",
     categoryEn: "Science & Space",
-    factGu: "આ ઐતિહાસિક સિદ્ધિના માનમાં દર વર્ષે ૨૩ ઓગસ્ટને 'રાષ્ટ્રીય અવકાશ દિવસ' (National Space Day) જાહેર કરાયો છે.",
+    factGu: "આ ઐતિહાસિક સિદ્ધિના માનમાં ૨૩ ઓગસ્ટને ભારતમાં 'રાષ્ટ્રીય અવકાશ દિવસ' (National Space Day) જાહેર કરાયો છે.",
     factEn: "India now celebrates August 23 as National Space Day.",
     difficulty: "Standard 8"
   },
   {
-    id: 5,
-    questionGu: "સૌરમંડળના કયા ગ્રહને તેની સપાટી પર રહેલા આયર્ન ઓક્સાઈડ (કાટ) ના કારણે 'લાલ ગ્રહ' (Red Planet) કહેવામાં આવે છે?",
-    questionEn: "Which planet in the solar system is known as the 'Red Planet' due to iron oxide on its surface?",
-    optionsGu: [
-      "બુધ (Mercury)",
-      "શુક્ર (Venus)",
-      "મંગળ (Mars)",
-      "ગુરુ (Jupiter)"
-    ],
-    optionsEn: [
-      "Mercury",
-      "Venus",
-      "Mars",
-      "Jupiter"
-    ],
-    correctAnswer: 2,
-    explanationGu: "મંગળ ગ્રહની માટી અને ખડકોમાં વિપુલ પ્રમાણમાં આયર્ન ઓક્સાઈડ (લોહ ઓક્સાઈડ) હોવાથી તે લાલ રંગનો દેખાય છે, તેથી તેને 'લાલ ગ્રહ' કહે છે.",
-    explanationEn: "Mars appears reddish because of widespread iron oxide (rust) on its surface, earning it the title 'The Red Planet'.",
-    categoryGu: "ખગોળ વિજ્ઞાન",
-    categoryEn: "Astronomy",
-    factGu: "મંગળ ગ્રહ પર સૂર્યમંડળનો સૌથી ઊંચો પર્વત/જ્વાળામુખી 'ઓલિમ્પસ મોન્સ' આવેલો છે, જે માઉન્ટ એવરેસ્ટ કરતાં ત્રણ ગણો ઊંચો છે.",
-    factEn: "Mars hosts Olympus Mons, the largest volcano in the solar system, nearly 3 times taller than Mt. Everest.",
-    difficulty: "Standard 8"
-  },
-  {
-    id: 6,
+    id: 10,
     questionGu: "ભારતીય લોકશાહીમાં નાગરિકો માટે મતાધિકાર (વોટ આપવા) માટેની લઘુત્તમ વયમર્યાદા કેટલી નક્કી કરેલી છે?",
     questionEn: "What is the minimum age required for a citizen to vote in Indian democratic elections?",
     optionsGu: [
@@ -147,140 +254,46 @@ export const STD_8_GK_QUESTIONS: Question[] = [
       "25 Years"
     ],
     correctAnswer: 1,
-    explanationGu: "ભારતમાં ૧૮ વર્ષ કે તેથી વધુ ઉંમરના દરેક નાગરિકને જાતિ, ધર્મ કે લિંગના ભેદભાવ વિના સાર્વત્રિક પુખ્ત મતાધિકાર પ્રાપ્ત છે. (૬૧મો બંધારણીય સુધારો, ૧૯૮૯).",
-    explanationEn: "In India, universal adult suffrage allows any citizen aged 18 or above to vote in elections (enacted via 61st Constitutional Amendment in 1989).",
+    explanationGu: "ભારતમાં ૧૮ વર્ષ કે તેથી વધુ ઉંમરના દરેક નાગરિકને સાર્વત્રિક પુખ્ત મતાધિકાર પ્રાપ્ત છે (૬૧મો બંધારણીય સુધારો, ૧૯૮૯).",
+    explanationEn: "In India, universal adult suffrage allows any citizen aged 18 or above to vote in elections.",
     categoryGu: "નાગરિકશાસ્ત્ર અને રાજકારણ",
     categoryEn: "Civics & Governance",
     factGu: "ભારતમાં દર વર્ષે ૨૫ જાન્યુઆરીએ 'રાષ્ટ્રીય મતદાતા દિવસ' (National Voters' Day) ઉજવવામાં આવે છે.",
     factEn: "January 25 is celebrated as National Voters' Day across India.",
     difficulty: "Standard 8"
-  },
-  {
-    id: 7,
-    questionGu: "પૃથ્વીના વાતાવરણનું કયું સ્તર સૂર્યમાંથી આવતા હાનિકારક પારજાંબલી (અલ્ટ્રાવાયોલેટ - UV) કિરણો સામે રક્ષણ આપે છે?",
-    questionEn: "Which layer of Earth's atmosphere protects life from harmful ultraviolet (UV) radiation from the Sun?",
-    optionsGu: [
-      "ક્ષોભ આવરણ (Troposphere)",
-      "ઓઝોન સ્તર (Ozone Layer)",
-      "આયનાવરણ (Ionosphere)",
-      "બાહ્યાવરણ (Exosphere)"
-    ],
-    optionsEn: [
-      "Troposphere",
-      "Ozone Layer (Stratosphere)",
-      "Ionosphere",
-      "Exosphere"
-    ],
-    correctAnswer: 1,
-    explanationGu: "ઓઝોન સ્તર (O3) સમતાપ આવરણમાં આવેલું છે. તે સૂર્યના નુકસાનકારક પારજાંબલી (UV) કિરણોને શોષી લે છે, જેનાથી ત્વચાના કેન્સર અને આંખોના રોગોથી પૃથ્વીના સજીવોનું રક્ષણ થાય છે.",
-    explanationEn: "The Ozone Layer, located in the stratosphere, absorbs harmful UV-B and UV-C rays emitted by the Sun, shielding living organisms.",
-    categoryGu: "સામાન્ય વિજ્ઞાન",
-    categoryEn: "General Science",
-    factGu: "૧૬ સપ્ટેમ્બરને વિશ્વભરમાં 'આંતરરાષ્ટ્રીય ઓઝોન સ્તર સંરક્ષણ દિવસ' તરીકે મનાવવામાં આવે છે.",
-    factEn: "September 16 is observed globally as World Ozone Day.",
-    difficulty: "Standard 8"
-  },
-  {
-    id: 8,
-    questionGu: "માનવ શરીરમાં ઓક્સિજનયુક્ત લોહીને શરીરના તમામ અંગો સુધી પહોંચાડવા માટે પંપિંગનું કાર્ય કયું અંગ કરે છે?",
-    questionEn: "Which vital organ in the human body acts as a pump to circulate blood throughout the body?",
-    optionsGu: [
-      "ફેફસાં (Lungs)",
-      "મગજ (Brain)",
-      "હૃદય (Heart)",
-      "યકૃત / લિવર (Liver)"
-    ],
-    optionsEn: [
-      "Lungs",
-      "Brain",
-      "Heart",
-      "Liver"
-    ],
-    correctAnswer: 2,
-    explanationGu: "માનવ હૃદય ચાર ખંડો ધરાવતું સ્નાયુબદ્ધ અંગ છે જે રુધિરાભિસરણ તંત્રનું કેન્દ્ર છે. તે શરીરના દરેક કોષ સુધી રક્ત દ્વારા ઓક્સિજન અને પોષક તત્ત્વો પહોંચાડે છે.",
-    explanationEn: "The human heart is a muscular 4-chambered organ that pumps oxygenated blood through the circulatory system to nourish cells.",
-    categoryGu: "માનવ શરીર અને જીવવિજ્ઞાન",
-    categoryEn: "Human Biology",
-    factGu: "એક સ્વસ્થ પુખ્ત વ્યક્તિનું હૃદય એક મિનિટમાં આશરે ૭0 થી ૭૨ વખત ધબકે છે.",
-    factEn: "A healthy human heart beats approximately 70-72 times per minute at rest.",
-    difficulty: "Standard 8"
-  },
-  {
-    id: 9,
-    questionGu: "ભારતના રાષ્ટ્રગાન 'જન ગણ મન' ના મૂળ રચયિતા કોણ હતા?",
-    questionEn: "Who was the original composer of India's National Anthem, 'Jana Gana Mana'?",
-    optionsGu: [
-      "બંકિમચંદ્ર ચટ્ટોપાધ્યાય",
-      "રવીન્દ્રનાથ ટાગોર",
-      "કવિ નર્મદ",
-      "સરોજિની નાયડુ"
-    ],
-    optionsEn: [
-      "Bankim Chandra Chattopadhyay",
-      "Rabindranath Tagore",
-      "Kavi Narmad",
-      "Sarojini Naidu"
-    ],
-    correctAnswer: 1,
-    explanationGu: "નોબેલ પુરસ્કાર વિજેતા કવિવર રવીન્દ્રનાથ ટાગોરે 'જન ગણ મન' ની રચના કરી હતી. જ્યારે બંકિમચંદ્ર ચટ્ટોપાધ્યાયે ભારતનું રાષ્ટ્રીય ગીત 'વંદે માતરમ્' રચ્યું હતું.",
-    explanationEn: "Nobel laureate Rabindranath Tagore composed 'Jana Gana Mana'. Bankim Chandra Chattopadhyay composed the National Song 'Vande Mataram'.",
-    categoryGu: "સાહિત્ય અને રાષ્ટ્રીય પ્રતીકો",
-    categoryEn: "Literature & Heritage",
-    factGu: "ભારતના રાષ્ટ્રગાન ગાવાનો સત્તાવાર સમય ૫૨ સેકન્ડ (52 Seconds) નિર્ધારિત છે.",
-    factEn: "The full formal rendition of India's national anthem takes 52 seconds.",
-    difficulty: "Standard 8"
-  },
-  {
-    id: 10,
-    questionGu: "ઇન્ટરનેટ અને કમ્પ્યુટર વિશ્વમાં વેબસાઇટ એડ્રેસ આગળ વપરાતા અક્ષરો 'WWW' નું પૂરું નામ શું છે?",
-    questionEn: "In computer and internet terminology, what does the abbreviation 'WWW' stand for?",
-    optionsGu: [
-      "World Wide Web (વર્લ્ડ વાઇડ વેબ)",
-      "World Wide Wireless (વર્લ્ડ વાઇડ વાયરલેસ)",
-      "Wide World Web (વાઇડ વર્લ્ડ વેબ)",
-      "World Web Works (વર્લ્ડ વેબ વર્ક્સ)"
-    ],
-    optionsEn: [
-      "World Wide Web",
-      "World Wide Wireless",
-      "Wide World Web",
-      "World Web Works"
-    ],
-    correctAnswer: 0,
-    explanationGu: "WWW એટલે World Wide Web. તેની શોધ સર ટિમ બર્નર્સ-લી (Tim Berners-Lee) એ વર્ષ ૧૯૮૯ માં કરી હતી, જેના લીધે આજે આપણે વેબસાઇટ્સ ખોલી શકીએ છીએ.",
-    explanationEn: "WWW stands for World Wide Web. It was invented by Sir Tim Berners-Lee in 1989, enabling interconnected web documents via the internet.",
-    categoryGu: "કમ્પ્યુટર અને ટેકનોલોજી",
-    categoryEn: "Computer Science",
-    factGu: "વિશ્વની સૌપ્રથમ વેબસાઇટ ૬ ઓગસ્ટ ૧૯૯૧ ના રોજ CERN પ્રયોગશાળા દ્વારા લાઇવ કરવામાં આવી હતી.",
-    factEn: "The world's very first website went online on August 6, 1991 at CERN.",
-    difficulty: "Standard 8"
   }
+];
+
+// Combine to form the default full 10-question set
+export const STD_8_GK_QUESTIONS: Question[] = [
+  ...PRIYANKABEN_QUIZ_QUESTIONS,
+  ...ADDITIONAL_STD_8_QUESTIONS
 ];
 
 export const BONUS_QUESTIONS_GUJARAT: Question[] = [
   {
     id: 11,
-    questionGu: "ગુજરાત રાજ્યની સ્થાપના કઈ તારીખે થઈ હતી?",
-    questionEn: "On which date was the State of Gujarat officially established?",
+    questionGu: "સૌરમંડળના કયા ગ્રહને તેની સપાટી પર રહેલા આયર્ન ઓક્સાઈડના કારણે 'લાલ ગ્રહ' (Red Planet) કહેવામાં આવે છે?",
+    questionEn: "Which planet in the solar system is known as the 'Red Planet' due to iron oxide on its surface?",
     optionsGu: [
-      "૧ મે, ૧૯૬૦",
-      "૧૫ ઓગસ્ટ, ૧૯૪૭",
-      "૨૬ જાન્યુઆરી, ૧૯૫૦",
-      "૧ નવેમ્બર, ૧૯૫૬"
+      "બુધ (Mercury)",
+      "શુક્ર (Venus)",
+      "મંગળ (Mars)",
+      "ગુરુ (Jupiter)"
     ],
     optionsEn: [
-      "May 1, 1960",
-      "August 15, 1947",
-      "January 26, 1950",
-      "November 1, 1956"
+      "Mercury",
+      "Venus",
+      "Mars",
+      "Jupiter"
     ],
-    correctAnswer: 0,
-    explanationGu: "બૃહદ મુંબઈ રાજ્યમાંથી ભાષાવાર વિભાજન થઈને ૧ મે, ૧૯૬૦ ના રોજ રવિશંકર મહારાજના આશીર્વાદ સાથે ગુજરાત રાજ્યની સ્થાપના થઈ હતી.",
-    explanationEn: "Gujarat was carved out of the bilingual Bombay State on May 1, 1960, inaugurated with blessings of social reformer Ravishankar Maharaj.",
-    categoryGu: "ગુજરાત ઇતિહાસ",
-    categoryEn: "Gujarat History",
-    factGu: "૧ મે ના દિવસને દર વર્ષે 'ગુજરાત ગૌરવ દિવસ' (Gujarat Day) તરીકે ઉજવાય છે.",
-    factEn: "May 1 is celebrated as Gujarat Day every year.",
+    correctAnswer: 2,
+    explanationGu: "મંગળ ગ્રહની માટી અને ખડકોમાં વિપુલ પ્રમાણમાં આયર્ન ઓક્સાઈડ હોવાથી તે લાલ રંગનો દેખાય છે.",
+    explanationEn: "Mars appears reddish because of widespread iron oxide on its surface.",
+    categoryGu: "ખગોળ વિજ્ઞાન",
+    categoryEn: "Astronomy",
+    factGu: "મંગળ પર સૌરમંડળનો સૌથી મોટો પર્વત 'ઓલિમ્પસ મોન્સ' છે.",
+    factEn: "Mars hosts Olympus Mons, the largest volcano in the solar system.",
     difficulty: "Standard 8"
   },
   {
@@ -300,11 +313,11 @@ export const BONUS_QUESTIONS_GUJARAT: Question[] = [
       "Mahi River"
     ],
     correctAnswer: 2,
-    explanationGu: "નર્મદા નદી ગુજરાતની જીવાદોરી (લાઈફલાઈન) ગણાય છે. તેના પર સરદાર સરોવર ડેમ આવેલો છે અને તેને પુરાણોમાં રેવા તરીકે પણ ઓળખવામાં આવે છે.",
+    explanationGu: "નર્મદા નદી ગુજરાતની જીવાદોરી ગણાય છે. તેના પર સરદાર સરોવર ડેમ આવેલો છે.",
     explanationEn: "Narmada is considered the lifeline of Gujarat and hosts the massive Sardar Sarovar Dam.",
     categoryGu: "ગુજરાત ભૂગોળ",
     categoryEn: "Gujarat Geography",
-    factGu: "નર્મદા નદી અમરકંટક (મધ્યપ્રદેશ) માંથી નીકળીને ખંભાતના અખાતમાં મળે છે.",
+    factGu: "નર્મદા નદી અમરકંટકમાંથી નીકળીને ખંભાતના અખાતમાં મળે છે.",
     factEn: "Narmada originates from Amarkantak and empties into the Gulf of Khambhat.",
     difficulty: "Standard 8"
   }
